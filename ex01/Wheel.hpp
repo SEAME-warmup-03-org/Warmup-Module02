@@ -1,13 +1,17 @@
 #pragma once
 #include <iostream>
 #include "Part.hpp"
-using namespace std;
 
 class Wheel : public Part
 {
-    public:
-        void print() override
-        {
-            cout << "Wheel part" << endl;
-        }
+public:
+    void print() override
+    {
+        std::cout << "Wheel part" << std::endl;
+    }
+
+    Wheel() {}
+    Wheel(const Wheel& other) = default;
+    ~Wheel() {}
+    Wheel& operator=(const Wheel& other) = default;
 };

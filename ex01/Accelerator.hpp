@@ -1,13 +1,17 @@
 #pragma once
 #include <iostream>
 #include "Part.hpp"
-using namespace std;
 
 class Accelerator : public Part
 {
-    public:
-        void print() override
-        {
-            cout << "Accelerator part" << endl;
-        }
+public:
+    void print() override
+    {
+        std::cout << "Accelerator part" << std::endl;
+    }
+
+    Accelerator() {}
+    Accelerator(const Accelerator& other) = default;
+    ~Accelerator() {}
+    Accelerator& operator=(const Accelerator& other) = default;
 };

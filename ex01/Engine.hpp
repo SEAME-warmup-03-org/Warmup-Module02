@@ -1,13 +1,17 @@
 #pragma once
 #include <iostream>
 #include "Part.hpp"
-using namespace std;
 
 class Engine : public Part
 {
-    public:
-        void print() override
-        {
-            cout << "Engine part" << endl;
-        }
+public:
+    void print() override
+    {
+        std::cout << "Engine part" << std::endl;
+    }
+
+    Engine() {}
+    Engine(const Engine& other) = default;
+    ~Engine() {}
+    Engine& operator=(const Engine& other) = default;
 };

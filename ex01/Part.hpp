@@ -1,9 +1,13 @@
 #pragma once
 #include <iostream>
-using namespace std;
 
 class Part
 {
-    public:
-        virtual void print() = 0;
+public:
+    virtual void print() = 0;
+
+    Part() {}
+    Part(const Part& other) = default;
+    virtual ~Part() {}
+    Part& operator=(const Part& other) = default;
 };
